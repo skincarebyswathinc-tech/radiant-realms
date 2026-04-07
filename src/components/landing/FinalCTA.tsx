@@ -24,7 +24,6 @@ const FinalCTA = () => {
             <Button variant="hero" size="lg" className="h-14 px-10 rounded-full text-base">
               Get the Full Library — ₹3,999 / $45
             </Button>
-            </Button>
             <Button variant="hero-outline" size="lg" className="h-14 px-10 rounded-full text-base">
               Try Free Sample First
             </Button>
