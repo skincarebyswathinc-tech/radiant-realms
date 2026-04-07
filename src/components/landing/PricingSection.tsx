@@ -102,6 +102,7 @@ const PricingSection = () => {
               <div className="mb-6">
                 <span className="font-serif text-4xl font-semibold">{plan.price}</span>
                 <span className="text-muted-foreground text-sm ml-1">{plan.period}</span>
+                <span className="block text-sm text-muted-foreground mt-1">or {plan.priceAlt} {plan.period}</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature, i) => (
