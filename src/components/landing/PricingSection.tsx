@@ -5,7 +5,8 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter Pack",
-    price: "₹99",
+    price: "₹449",
+    priceAlt: "$5",
     period: "one-time",
     description: "Perfect to try before you commit",
     features: [
@@ -20,7 +21,8 @@ const plans = [
   },
   {
     name: "Complete Library",
-    price: "₹299",
+    price: "₹3,999",
+    priceAlt: "$45",
     period: "one-time",
     description: "Full access to every prompt category",
     features: [
@@ -37,6 +39,7 @@ const plans = [
   {
     name: "Pro Membership",
     price: "₹499",
+    priceAlt: "$5",
     period: "/month",
     description: "For coaches & power users",
     features: [
