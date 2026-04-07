@@ -30,13 +30,13 @@ const solutions = [
 
 const SolutionSection = () => {
   return (
-    <section className="py-20 md:py-28" id="solution">
+    <section className="py-16 md:py-24 section-divider" id="solution">
       <div className="container">
         <motion.div
-          className="text-center max-w-xl mx-auto mb-16"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-center max-w-xl mx-auto mb-12 md:mb-16"
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-sage text-sage-dark text-sm font-medium mb-4">
@@ -46,27 +46,27 @@ const SolutionSection = () => {
             What If AI Could Be Your{" "}
             <span className="italic">Wellness Expert?</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base md:text-lg">
             With the right prompts, ChatGPT becomes your personal skin care
             advisor, gut health coach, nutritionist, and fitness trainer — all
             in one.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
           {solutions.map((item, index) => (
             <motion.div
               key={index}
-              className="relative p-8 rounded-2xl bg-card border border-border/60 group hover:border-primary/30 transition-colors duration-300"
+              className="relative p-6 md:p-8 rounded-2xl bg-card border border-border/60 group hover:border-primary/30 transition-colors duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-sage/60 flex items-center justify-center mb-5 group-hover:bg-sage transition-colors duration-300">
-                <item.icon className="w-6 h-6 text-sage-dark" />
+              <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-sage/60 flex items-center justify-center mb-4 md:mb-5 group-hover:bg-sage transition-colors duration-300">
+                <item.icon className="w-5 h-5 md:w-6 md:h-6 text-sage-dark" />
               </div>
-              <h3 className="font-serif text-xl font-medium mb-2">
+              <h3 className="font-serif text-lg md:text-xl font-medium mb-2">
                 {item.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
