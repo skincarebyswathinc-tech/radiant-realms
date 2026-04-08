@@ -1,26 +1,35 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plug, MessageCircle, Sparkles, ShieldCheck } from "lucide-react";
 
 const steps = [
   {
-    number: "01",
-    title: "Choose Your Prompt",
+    label: "Plug",
+    icon: Plug,
+    title: "Pick Your Prompt",
     description:
-      "Browse 500+ prompts across skin care, gut health, nutrition, and fitness. Find the one that matches your concern.",
+      "Browse 500+ ready-made prompts organised by skin care, gut health, nutrition & fitness. Find the exact one that matches your concern — or your client's.",
   },
   {
-    number: "02",
-    title: "Paste into ChatGPT",
+    label: "Ask",
+    icon: MessageCircle,
+    title: "Paste & Personalise",
     description:
-      "Copy the prompt, paste it into ChatGPT (free version works!), and add your personal details where indicated.",
+      "Copy the prompt into ChatGPT (the free version works perfectly). Fill in a few personal details where marked — age, skin type, diet preference — and hit send.",
   },
   {
-    number: "03",
-    title: "Get Your Custom Plan",
+    label: "Get Results",
+    icon: Sparkles,
+    title: "Receive Your Custom Plan",
     description:
-      "Receive a detailed, personalised response — a routine, meal plan, workout, or diagnosis guide tailored to you.",
+      "In under 30 seconds, get a detailed routine, meal plan, supplement guide, or workout — tailored specifically to you. No generic advice, no hours of research.",
   },
+];
+
+const differentiators = [
+  "Structured prompts trained on real wellness frameworks — not random internet tips",
+  "Works for personal use and for coaches building client protocols",
+  "No apps, no subscriptions — just copy, paste, and get answers that actually fit",
 ];
 
 const HowItWorks = () => {
@@ -38,11 +47,10 @@ const HowItWorks = () => {
             How It Works
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            Three Steps to <span className="italic">Better Health</span>
+            Plug → Ask → <span className="italic text-primary">Get Results</span>
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg">
-            No apps to install. No subscriptions required. Just prompts that
-            work.
+          <p className="text-muted-foreground text-base md:text-lg max-w-md mx-auto">
+            A simple 3-step system that turns AI into your personal wellness expert — in seconds, not hours.
           </p>
         </motion.div>
 
@@ -56,20 +64,18 @@ const HowItWorks = () => {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
             >
-              {/* Timeline line */}
               {index < steps.length - 1 && (
                 <div className="absolute left-[25px] md:left-[35px] top-16 bottom-0 w-px bg-border" />
               )}
 
-              {/* Step number circle */}
               <div className="shrink-0 w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
-                <span className="font-serif text-lg md:text-2xl font-semibold text-primary">
-                  {step.number}
-                </span>
+                <step.icon className="w-5 h-5 md:w-7 md:h-7 text-primary" />
               </div>
 
-              {/* Content */}
               <div className="pb-10 md:pb-16 pt-1">
+                <span className="text-xs font-semibold uppercase tracking-widest text-primary/70 mb-1 block">
+                  {step.label}
+                </span>
                 <h3 className="font-serif text-xl md:text-2xl font-medium mb-2">
                   {step.title}
                 </h3>
@@ -81,9 +87,29 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* Inline CTA */}
+        {/* Why it's different */}
         <motion.div
-          className="text-center mt-4 md:mt-8"
+          className="max-w-xl mx-auto mt-4 md:mt-8 bg-background/60 border border-border/40 rounded-2xl p-6 md:p-8"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <h4 className="font-serif text-lg md:text-xl font-medium mb-4 text-center">
+            Why This Beats Random Advice
+          </h4>
+          <ul className="space-y-3">
+            {differentiators.map((item, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                <ShieldCheck className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        <motion.div
+          className="text-center mt-8 md:mt-12"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
