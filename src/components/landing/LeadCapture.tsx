@@ -80,20 +80,21 @@ const LeadCapture = () => {
             >
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5 md:mb-6">
                 <Gift className="w-4 h-4" />
-                100% Free — No Card Required
+                Free for a Limited Time
               </div>
 
               <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-light leading-tight mb-3 md:mb-4">
-                Get Your Free{" "}
-                <span className="italic text-primary">Prompt Pack</span>
+                Your First{" "}
+                <span className="italic text-primary">Wellness Breakthrough</span>
+                {" "}Starts Here
               </h2>
 
               <p className="text-muted-foreground text-sm md:text-base mb-6 md:mb-8">
-                Try 10 hand-picked prompts and see why thousands of women trust
-                Glow Prompts for their wellness journey.
+                Download 10 expert-crafted AI prompts and get personalised skin,
+                gut & nutrition plans — in seconds, not hours.
               </p>
 
-              <ul className="space-y-3 md:space-y-4">
+              <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 {benefits.map((benefit, i) => (
                   <motion.li
                     key={i}
@@ -110,6 +111,18 @@ const LeadCapture = () => {
                   </motion.li>
                 ))}
               </ul>
+
+              <div className="border-t border-border/40 pt-5">
+                <p className="text-xs font-medium text-primary mb-2 uppercase tracking-wider">Perfect for</p>
+                <ul className="space-y-2">
+                  {audienceItems.map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <span className="w-1 h-1 rounded-full bg-primary/60 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
 
             {/* Right — Form card */}
