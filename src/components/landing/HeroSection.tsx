@@ -35,7 +35,7 @@ const HeroSection = () => {
             >
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage text-sage-dark text-sm font-medium tracking-wide mb-5 md:mb-6">
                 <Zap className="w-3.5 h-3.5" />
-                AI-Powered Wellness Prompts
+                Trusted by 2,000+ Women & Wellness Coaches
               </span>
             </motion.div>
 
@@ -45,10 +45,10 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
             >
-              Transform Your Health
+              Stop Googling.
               <br />
               <span className="italic font-normal text-primary">
-                With One Prompt
+                Start Healing Smarter.
               </span>
             </motion.h1>
 
@@ -58,8 +58,8 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              500+ expert-crafted AI prompts for skin care, gut health,
-              nutrition & fitness — personalised answers in seconds, not hours.
+              500+ ready-to-use AI prompts that give you expert-level skin care,
+              gut health & nutrition plans in 30 seconds — no research, no guesswork.
             </motion.p>
 
             <motion.div
