@@ -139,10 +139,13 @@ const LeadCapture = () => {
                 </div>
 
                 <h3 className="font-serif text-xl md:text-2xl font-medium mb-2 text-center">
-                  Claim Your Free Pack
+                  Get Instant Access
                 </h3>
-                <p className="text-sm text-muted-foreground text-center mb-6 md:mb-7">
-                  Instant delivery to your inbox
+                <p className="text-sm text-muted-foreground text-center mb-1">
+                  Delivered straight to your inbox
+                </p>
+                <p className="text-xs text-primary/70 text-center mb-6 md:mb-7 font-medium">
+                  🔥 Over 2,000 downloads this month
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-3.5 md:space-y-4">
