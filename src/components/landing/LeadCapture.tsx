@@ -7,10 +7,17 @@ import { toast } from "sonner";
 import { Gift, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 
 const benefits = [
-  "10 expert-crafted prompts across skin, gut, nutrition & fitness",
-  "Works with free ChatGPT — no paid tools needed",
-  "Personalised results in under 60 seconds",
-  "Bonus: Quick-start guide to get the best AI answers",
+  "10 ready-to-use prompts for skin, gut, nutrition & weight goals",
+  "Get a personalised wellness plan in under 60 seconds — free",
+  "Works with free ChatGPT — zero paid tools required",
+  "Bonus: Quick-start guide so you nail every prompt first try",
+  "Same framework used by 2,000+ women & wellness coaches",
+];
+
+const audienceItems = [
+  "Women tired of conflicting health advice online",
+  "Wellness & nutrition coaches who want faster client results",
+  "Anyone ready to stop guessing and start healing smarter",
 ];
 
 const LeadCapture = () => {
