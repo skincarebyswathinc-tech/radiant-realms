@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, Leaf, TrendingUp, Users, FileText, Zap } from "lucide-react";
+import { Heart, Bean, TrendingUp, Users, FileText, Zap } from "lucide-react";
 
 const individuals = [
   { icon: Heart, text: "Clear stubborn skin issues with prompts built by dermatology-informed frameworks" },
