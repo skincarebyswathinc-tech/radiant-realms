@@ -123,8 +123,11 @@ const PricingSection = () => {
                 <h3 className="font-serif text-xl md:text-2xl font-medium mb-1">
                   {plan.name}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4 md:mb-5">
+                <p className="text-sm text-muted-foreground mb-2 md:mb-3">
                   {plan.description}
+                </p>
+                <p className="text-xs text-primary/80 font-medium mb-4 md:mb-5">
+                  {plan.whoFor}
                 </p>
 
                 <div className="mb-6 md:mb-7">
