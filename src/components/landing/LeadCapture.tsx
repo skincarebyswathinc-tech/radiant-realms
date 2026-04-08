@@ -206,7 +206,7 @@ const LeadCapture = () => {
                       "Sending…"
                     ) : (
                       <>
-                        Send Me Free Prompts
+                        Yes, Send My Free Prompts →
                         <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </>
                     )}
