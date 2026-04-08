@@ -80,10 +80,10 @@ const PricingSection = () => {
             Simple Pricing
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            Invest in Your <span className="italic">Wellness</span>
+            Choose Your <span className="italic">Transformation</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            Less than the cost of one consultation. Unlimited value.
+            Less than one consultation. Results you'll use every single day.
           </p>
         </motion.div>
 
