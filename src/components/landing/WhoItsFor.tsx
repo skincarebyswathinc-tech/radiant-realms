@@ -3,7 +3,7 @@ import { Heart, Bean, TrendingUp, Users, FileText, Zap } from "lucide-react";
 
 const individuals = [
   { icon: Heart, text: "Clear stubborn skin issues with prompts built by dermatology-informed frameworks" },
-  { icon: Leaf, text: "Fix gut problems — bloating, inflammation, food sensitivities — with targeted nutrition plans" },
+  { icon: Bean, text: "Fix gut problems — bloating, inflammation, food sensitivities — with targeted nutrition plans" },
   { icon: TrendingUp, text: "Lose weight sustainably with AI meal plans tailored to your body, not a generic chart" },
   { icon: Zap, text: "Get expert-level answers in 60 seconds instead of hours of conflicting Google results" },
 ];
