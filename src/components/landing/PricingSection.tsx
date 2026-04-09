@@ -8,15 +8,15 @@ const plans = [
     price: "₹199",
     priceAlt: "$2.50",
     period: "one-time",
-    description: "Your first step to ditching generic health advice — try it risk-free and feel the difference one prompt can make.",
+    description: "Your effortless first step. Try it risk-free and feel the difference one prompt can make.",
     whoFor: "For curious beginners ready to test the waters",
     features: [
-      "25 hand-picked prompts for skin & gut health",
+      "25 hand-picked prompts for skin & gut",
       "Personalised answers in under 60 seconds",
       "Copy-paste format — zero learning curve",
       "Quick-start guide included",
     ],
-    cta: "Start for ₹199",
+    cta: "Start for Just ₹199",
     variant: "hero-outline" as const,
     popular: false,
     accent: false,
@@ -26,8 +26,8 @@ const plans = [
     price: "₹1,999",
     priceAlt: "$24",
     period: "one-time",
-    description: "The complete system — 500+ prompts across every wellness category. One purchase, unlimited transformations.",
-    whoFor: "For women & coaches who want the full toolkit",
+    description: "The complete transformation toolkit. 500+ proven prompts. One purchase. Unlimited results.",
+    whoFor: "Best value — for women & coaches who want it all",
     features: [
       "500+ prompts — skin, gut, nutrition & fitness",
       "Advanced personalisation frameworks",
@@ -35,7 +35,7 @@ const plans = [
       "Lifetime updates at no extra cost",
       "Priority WhatsApp support",
     ],
-    cta: "Get the Full Library",
+    cta: "Get the Full Library →",
     variant: "hero" as const,
     popular: true,
     accent: false,
@@ -45,8 +45,8 @@ const plans = [
     price: "₹499",
     priceAlt: "$6",
     period: "/month",
-    description: "Stay ahead with fresh prompts every month, private coaching, and a community of wellness professionals.",
-    whoFor: "For coaches & power users scaling their practice",
+    description: "Stay ahead. Fresh prompts monthly, private coaching, and a community of wellness pros.",
+    whoFor: "For coaches & power users scaling fast",
     features: [
       "Everything in the Pro Library",
       "30+ new prompts dropped monthly",
@@ -77,13 +77,13 @@ const PricingSection = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-sage text-sage-dark text-sm font-medium mb-4">
-            Simple Pricing
+            🔥 Early-Access Pricing — Limited Time
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            Choose Your <span className="italic">Transformation</span>
+            Invest in Your <span className="italic">Transformation</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            Less than one consultation. Results you'll use every single day.
+            Less than one consultation. Results you'll use <strong>every single day.</strong>
           </p>
         </motion.div>
 

@@ -1,30 +1,31 @@
 import { motion } from "framer-motion";
-import { Sparkles, Brain, Clock, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sparkles, Brain, Clock, Shield, ArrowRight } from "lucide-react";
 
 const solutions = [
   {
     icon: Sparkles,
-    title: "Expert-Crafted Prompts",
+    title: "Expert-Crafted. Battle-Tested.",
     description:
-      "Each prompt is designed by wellness professionals — no guesswork, just copy-paste into any AI and get personalised guidance.",
+      "Every prompt is designed by wellness professionals. No guesswork — just copy, paste, and get proven guidance instantly.",
   },
   {
     icon: Brain,
-    title: "Smarter AI Responses",
+    title: "Unlock Smarter AI Answers",
     description:
-      "Structured prompts unlock deeper, more actionable answers from ChatGPT — the kind that generic questions never produce.",
+      "Structured prompts pull deeper, actionable insights from ChatGPT. Generic questions can't compete.",
   },
   {
     icon: Clock,
-    title: "Results in 60 Seconds",
+    title: "Results in 60 Seconds Flat",
     description:
-      "Skip hours of research. Paste one prompt, get a tailored plan for your skin type, gut issues, diet, or fitness goal.",
+      "Skip hours of research. One prompt → one tailored plan for your skin, gut, diet, or fitness goal. Effortless.",
   },
   {
     icon: Shield,
-    title: "Trusted & Safe Guidance",
+    title: "Trusted & Safe. Always.",
     description:
-      "Prompts are reviewed for accuracy and always remind you to consult professionals for medical concerns.",
+      "Every prompt is reviewed for accuracy. Your health matters — we never cut corners.",
   },
 ];
 
@@ -40,16 +41,14 @@ const SolutionSection = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-sage text-sage-dark text-sm font-medium mb-4">
-            The Solution
+            The Breakthrough
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
             What If AI Could Be Your{" "}
-            <span className="italic">Wellness Expert?</span>
+            <span className="italic">Personal Wellness Expert?</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            With the right prompts, ChatGPT becomes your personal skin care
-            advisor, gut health coach, nutritionist, and fitness trainer — all
-            in one.
+            With the right prompts, ChatGPT becomes your skin advisor, gut coach, nutritionist, and trainer — <strong>all in one.</strong>
           </p>
         </motion.div>
 
@@ -75,6 +74,21 @@ const SolutionSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="text-center mt-8 md:mt-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a href="#get-free">
+            <Button variant="hero" size="lg" className="rounded-full h-12 px-8 text-sm group">
+              Try It Free — No Risk
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
