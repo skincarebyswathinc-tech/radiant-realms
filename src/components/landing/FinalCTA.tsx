@@ -1,18 +1,17 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Zap, Heart } from "lucide-react";
+import { ArrowRight, Clock, Sparkles, ShieldCheck } from "lucide-react";
 
-const closingPoints = [
-  { icon: Zap, text: "Instant digital delivery" },
-  { icon: Shield, text: "7-day money-back guarantee" },
-  { icon: Heart, text: "Works with free ChatGPT" },
+const urgencyPoints = [
+  { icon: Clock, text: "Launch pricing won't last forever" },
+  { icon: ShieldCheck, text: "7-day money-back guarantee" },
+  { icon: Sparkles, text: "Instant access — start in 2 minutes" },
 ];
 
 const FinalCTA = () => {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
-      {/* Rich gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.06] via-sage/30 to-accent/10" />
+    <section className="py-20 md:py-28 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.08] via-sage/30 to-accent/10" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/4" />
 
       <div className="container relative z-10">
@@ -23,18 +22,21 @@ const FinalCTA = () => {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5 md:mb-6">
-            Start Your Journey Today
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5">
+            You've Read This Far — That Means Something
           </span>
 
-          <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-light mb-4 md:mb-5 leading-tight">
-            Stop Guessing.
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-light mb-5 leading-tight">
+            Your Healthiest Self Is
             <br />
-            <span className="italic text-primary">Start Glowing.</span>
+            <span className="italic text-primary">One Prompt Away.</span>
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg mb-8 md:mb-10 max-w-md mx-auto">
-            Join thousands of women using AI to take control of their skin, gut,
-            nutrition, and fitness — starting today.
+
+          <p className="text-muted-foreground text-base md:text-lg mb-4 max-w-lg mx-auto">
+            You already know what it feels like to scroll endlessly, try random tips, and see zero results.
+          </p>
+          <p className="text-foreground text-base md:text-lg font-medium mb-10 max-w-lg mx-auto">
+            This is different. One library. Personalised answers. Real change — starting today.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
@@ -44,7 +46,7 @@ const FinalCTA = () => {
                 size="lg"
                 className="h-13 md:h-14 px-8 md:px-10 rounded-full text-base group w-full sm:w-auto"
               >
-                Get the Full Library — ₹3,999
+                Yes, I'm Ready to Transform
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
@@ -54,12 +56,11 @@ const FinalCTA = () => {
                 size="lg"
                 className="h-13 md:h-14 px-8 md:px-10 rounded-full text-base w-full sm:w-auto"
               >
-                Try Free Sample First
+                Try a Free Sample First
               </Button>
             </a>
           </div>
 
-          {/* Closing trust points */}
           <motion.div
             className="flex flex-wrap gap-x-6 gap-y-2 justify-center mt-8 md:mt-10"
             initial={{ opacity: 0 }}
@@ -67,7 +68,7 @@ const FinalCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            {closingPoints.map((point, i) => (
+            {urgencyPoints.map((point, i) => (
               <div
                 key={i}
                 className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground"
@@ -77,6 +78,10 @@ const FinalCTA = () => {
               </div>
             ))}
           </motion.div>
+
+          <p className="text-xs text-muted-foreground/60 mt-6">
+            No subscriptions required · Works with free ChatGPT · Cancel-free, keep forever
+          </p>
         </motion.div>
       </div>
     </section>
