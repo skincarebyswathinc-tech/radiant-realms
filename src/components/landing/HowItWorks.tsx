@@ -8,28 +8,28 @@ const steps = [
     icon: Plug,
     title: "Pick Your Prompt",
     description:
-      "Browse 500+ ready-made prompts organised by skin care, gut health, nutrition & fitness. Find the exact one that matches your concern — or your client's.",
+      "Browse 500+ ready-made prompts — organised by skin, gut, nutrition & fitness. Find exactly what you need in seconds.",
   },
   {
     label: "Ask",
     icon: MessageCircle,
     title: "Paste & Personalise",
     description:
-      "Copy the prompt into ChatGPT (the free version works perfectly). Fill in a few personal details where marked — age, skin type, diet preference — and hit send.",
+      "Copy the prompt into ChatGPT (free version works perfectly). Fill in a few details — age, skin type, goals — and hit send.",
   },
   {
     label: "Get Results",
     icon: Sparkles,
-    title: "Receive Your Custom Plan",
+    title: "Get Your Custom Plan — Instantly",
     description:
-      "In under 30 seconds, get a detailed routine, meal plan, supplement guide, or workout — tailored specifically to you. No generic advice, no hours of research.",
+      "In under 30 seconds: a detailed routine, meal plan, or workout — tailored to you. No generic advice. No endless research. Just clarity.",
   },
 ];
 
 const differentiators = [
-  "Structured prompts trained on real wellness frameworks — not random internet tips",
-  "Works for personal use and for coaches building client protocols",
-  "No apps, no subscriptions — just copy, paste, and get answers that actually fit",
+  "Proven prompts built on real wellness frameworks — not random internet tips",
+  "Works for personal use AND for coaches building client protocols",
+  "No apps, no subscriptions — copy, paste, transform. It's that effortless.",
 ];
 
 const HowItWorks = () => {
@@ -44,13 +44,13 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-4">
-            How It Works
+            Ridiculously Simple
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            Plug → Ask → <span className="italic text-primary">Get Results</span>
+            Plug → Ask → <span className="italic text-primary">Transform</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg max-w-md mx-auto">
-            A simple 3-step system that turns AI into your personal wellness expert — in seconds, not hours.
+            Three steps. Sixty seconds. A personalised wellness plan that actually works.
           </p>
         </motion.div>
 
@@ -87,7 +87,6 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* Why it's different */}
         <motion.div
           className="max-w-xl mx-auto mt-4 md:mt-8 bg-background/60 border border-border/40 rounded-2xl p-6 md:p-8"
           initial={{ opacity: 0, y: 16 }}
@@ -116,8 +115,8 @@ const HowItWorks = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <a href="#get-free">
-            <Button variant="hero-outline" size="lg" className="rounded-full h-12 px-8 text-sm group">
-              Try It Free
+            <Button variant="hero" size="lg" className="rounded-full h-12 px-8 text-sm group">
+              Get Your Free Prompts Now
               <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
           </a>

@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Shield, Zap, Users } from "lucide-react";
 
 const promptCards = [
-  { category: "Skin Care", prompt: "Create a morning routine for oily, acne-prone skin with Indian climate considerations…", color: "bg-primary/10 text-primary" },
-  { category: "Gut Health", prompt: "Design a 7-day gut reset plan for someone with frequent bloating after meals…", color: "bg-accent/20 text-accent-foreground" },
-  { category: "Nutrition", prompt: "Build a 1,800 cal vegetarian meal plan optimised for PCOD management…", color: "bg-sage text-sage-dark" },
-  { category: "Fitness", prompt: "Create a low-impact home workout for post-pregnancy recovery…", color: "bg-secondary text-secondary-foreground" },
+  { category: "Skin Care", prompt: "Create a proven morning routine for oily, acne-prone skin with Indian climate considerations…", color: "bg-primary/10 text-primary" },
+  { category: "Gut Health", prompt: "Design an effortless 7-day gut reset plan for someone with frequent bloating after meals…", color: "bg-accent/20 text-accent-foreground" },
+  { category: "Nutrition", prompt: "Build a science-backed 1,800 cal vegetarian meal plan optimised for PCOD management…", color: "bg-sage text-sage-dark" },
+  { category: "Fitness", prompt: "Create a fail-proof low-impact home workout for post-pregnancy recovery…", color: "bg-secondary text-secondary-foreground" },
 ];
 
 const trustBadges = [
@@ -19,14 +19,12 @@ const trustBadges = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden">
-      {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-sage/20" />
       <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-accent/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
 
       <div className="container relative z-10 py-12 md:py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Left — Copy */}
           <div className="text-center lg:text-left order-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -35,7 +33,7 @@ const HeroSection = () => {
             >
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage text-sage-dark text-sm font-medium tracking-wide mb-5 md:mb-6">
                 <Zap className="w-3.5 h-3.5" />
-                AI-Powered Wellness Prompts
+                🔥 Early Access — Limited-Time Pricing
               </span>
             </motion.div>
 
@@ -45,10 +43,10 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
             >
-              Transform Your Health
+              Instant Clarity for
               <br />
               <span className="italic font-normal text-primary">
-                With One Prompt
+                Your Health Goals
               </span>
             </motion.h1>
 
@@ -58,8 +56,8 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              500+ expert-crafted AI prompts for skin care, gut health,
-              nutrition & fitness — personalised answers in seconds, not hours.
+              500+ proven AI prompts for skin care, gut health,
+              nutrition & fitness. <strong>Effortless answers in seconds.</strong> No guesswork. No overwhelm.
             </motion.p>
 
             <motion.div
@@ -74,7 +72,7 @@ const HeroSection = () => {
                   size="lg"
                   className="h-13 md:h-14 px-8 md:px-10 rounded-full text-base group w-full sm:w-auto"
                 >
-                  Get Free Prompt Pack
+                  Grab Your Free Prompt Pack
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
@@ -89,7 +87,6 @@ const HeroSection = () => {
               </a>
             </motion.div>
 
-            {/* Trust badges */}
             <motion.div
               className="flex flex-wrap gap-x-5 md:gap-x-6 gap-y-2.5 mt-8 md:mt-10 justify-center lg:justify-start"
               initial={{ opacity: 0 }}
@@ -108,7 +105,6 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Right — UI Mockup */}
           <motion.div
             className="relative order-2 hidden md:block"
             initial={{ opacity: 0, x: 40 }}
@@ -116,7 +112,6 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div className="relative bg-card/80 backdrop-blur-sm border border-border/60 rounded-2xl p-5 shadow-2xl shadow-primary/5">
-              {/* Mockup header */}
               <div className="flex items-center gap-3 mb-5 pb-4 border-b border-border/40">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-destructive/40" />
@@ -130,7 +125,6 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Prompt cards */}
               <div className="space-y-3">
                 {promptCards.map((card, i) => (
                   <motion.div
@@ -150,7 +144,6 @@ const HeroSection = () => {
                 ))}
               </div>
 
-              {/* Bottom stat bar */}
               <div className="mt-5 pt-4 border-t border-border/40 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
@@ -166,7 +159,6 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Floating accent elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/15 rounded-full blur-2xl" />
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
           </motion.div>

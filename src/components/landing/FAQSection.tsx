@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -9,11 +11,11 @@ import {
 const faqs = [
   {
     q: "What exactly is an AI Prompt Library?",
-    a: "It's a curated collection of ready-to-use questions and instructions you copy-paste into ChatGPT (or any AI). Each prompt is crafted by wellness experts to give you personalised, actionable answers about skin care, gut health, nutrition, and fitness.",
+    a: "It's a curated collection of ready-to-use questions you copy-paste into ChatGPT (or any AI). Each prompt is crafted by wellness experts to give you personalised, actionable answers — instantly. No guesswork.",
   },
   {
     q: "Do I need ChatGPT Plus?",
-    a: "No! These prompts work with the free version of ChatGPT, Google Gemini, or any AI assistant. No paid subscription needed.",
+    a: "Nope! These prompts work with the free version of ChatGPT, Google Gemini, or any AI assistant. Zero paid subscriptions needed.",
   },
   {
     q: "Is this a replacement for a doctor?",
@@ -21,15 +23,15 @@ const faqs = [
   },
   {
     q: "Can I use this for my coaching business?",
-    a: "The Starter and Complete Library are for personal use. The Pro Membership includes a commercial license so you can use prompts with your clients.",
+    a: "The Starter and Pro Library are for personal use. The Monthly Membership includes a commercial license — use prompts with your clients, no restrictions.",
   },
   {
-    q: "How do I receive the prompts?",
-    a: "Instantly via email as a beautifully organised PDF + Notion template. You'll also get WhatsApp access for the bonus materials.",
+    q: "How fast do I get the prompts?",
+    a: "Instantly. After purchase, you receive a beautifully organised PDF + Notion template via email. WhatsApp access included for bonus materials.",
   },
   {
-    q: "Is there a refund policy?",
-    a: "Yes — 7-day no-questions-asked refund if you're not satisfied. We're confident you'll love it.",
+    q: "What if I don't like it?",
+    a: "7-day no-questions-asked refund. We're confident you'll love it — but there's zero risk either way.",
   },
 ];
 
@@ -45,10 +47,10 @@ const FAQSection = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-4">
-            FAQ
+            Got Questions?
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            Common <span className="italic">Questions</span>
+            We've Got <span className="italic">Answers.</span>
           </h2>
         </motion.div>
 
@@ -75,6 +77,22 @@ const FAQSection = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </motion.div>
+
+        <motion.div
+          className="text-center mt-8 md:mt-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <p className="text-sm text-muted-foreground mb-4">Still undecided? Start free — zero risk.</p>
+          <a href="#get-free">
+            <Button variant="hero-outline" size="lg" className="rounded-full h-12 px-8 text-sm group">
+              Grab Your Free Prompt Pack
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>

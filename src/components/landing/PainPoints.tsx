@@ -1,25 +1,27 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const painPoints = [
   {
     emoji: "😩",
-    title: "Confused by contradicting health advice?",
-    description: "Every search gives different answers about what to eat, apply, or avoid.",
+    title: "Drowning in contradicting advice?",
+    description: "Every search gives a different answer. You end up more confused than before. Sound familiar?",
   },
   {
     emoji: "💸",
-    title: "Tired of expensive consultations?",
-    description: "₹2,000+ per session for basic diet or skin advice that feels generic.",
+    title: "Burning money on generic consultations?",
+    description: "₹2,000+ per session — and the advice barely feels personalised. There's a smarter way.",
   },
   {
     emoji: "⏰",
-    title: "No time for hours of research?",
-    description: "Between work and life, who has time to read 20 articles for one answer?",
+    title: "Zero time for endless research?",
+    description: "Between work, family, and life — who can spend hours piecing together a wellness plan?",
   },
   {
     emoji: "🤷‍♀️",
-    title: "Don't know what to ask AI?",
-    description: "ChatGPT is powerful, but vague questions give vague answers.",
+    title: "AI feels powerful but… useless?",
+    description: "ChatGPT is incredible. But vague questions give vague answers. The right prompt changes everything.",
   },
 ];
 
@@ -35,13 +37,13 @@ const PainPoints = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-4">
-            The Problem
+            Stop Struggling
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            Sound <span className="italic">Familiar?</span>
+            This Frustration Ends <span className="italic">Today.</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            You're not alone. These are the exact problems our prompt library solves.
+            You deserve instant clarity — not another rabbit hole.
           </p>
         </motion.div>
 
@@ -61,6 +63,21 @@ const PainPoints = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="text-center mt-8 md:mt-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a href="#solution">
+            <Button variant="hero-outline" size="lg" className="rounded-full h-12 px-8 text-sm group">
+              See the Solution
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Sparkles, ShieldCheck } from "lucide-react";
 
 const urgencyPoints = [
-  { icon: Clock, text: "Launch pricing won't last forever" },
+  { icon: Clock, text: "Early-access pricing ends soon" },
   { icon: ShieldCheck, text: "7-day money-back guarantee" },
   { icon: Sparkles, text: "Instant access — start in 2 minutes" },
 ];
@@ -33,10 +33,10 @@ const FinalCTA = () => {
           </h2>
 
           <p className="text-muted-foreground text-base md:text-lg mb-4 max-w-lg mx-auto">
-            You already know what it feels like to scroll endlessly, try random tips, and see zero results.
+            No more scrolling. No more guesswork. No more wasted money on generic advice.
           </p>
           <p className="text-foreground text-base md:text-lg font-medium mb-10 max-w-lg mx-auto">
-            This is different. One library. Personalised answers. Real change — starting today.
+            One library. Proven prompts. Instant clarity. <strong>Real change — starting now.</strong>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">

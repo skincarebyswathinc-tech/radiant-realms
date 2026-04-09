@@ -1,29 +1,31 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const categories = [
   {
     icon: "✨",
     title: "Skin Care",
     count: "120+",
-    examples: ["Acne routine by skin type", "Anti-aging ingredient guide", "Product recommendations"],
+    examples: ["Proven acne routines by skin type", "Anti-aging ingredient blueprints", "Personalised product guides"],
   },
   {
     icon: "🫁",
     title: "Gut Health",
     count: "100+",
-    examples: ["Bloating relief protocols", "Probiotic food plans", "Gut-skin axis prompts"],
+    examples: ["Instant bloating relief protocols", "Probiotic food strategies", "Gut-skin connection prompts"],
   },
   {
     icon: "🥗",
     title: "Nutrition",
     count: "150+",
-    examples: ["Macro-balanced meal plans", "Deficiency analysis", "Indian diet optimization"],
+    examples: ["Effortless macro-balanced meal plans", "Deficiency analysis prompts", "Indian diet optimisation"],
   },
   {
     icon: "🏋️‍♀️",
     title: "Fitness",
     count: "130+",
-    examples: ["Home workout routines", "PCOD-friendly exercises", "Recovery plans"],
+    examples: ["Fail-proof home workouts", "PCOD-friendly routines", "Science-backed recovery plans"],
   },
 ];
 
@@ -39,13 +41,13 @@ const WhatYouGet = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-4">
-            What's Inside
+            Everything You Need
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            500+ Ready-to-Use <span className="italic">Prompts</span>
+            500+ Proven, Ready-to-Use <span className="italic">Prompts</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            Copy, paste into ChatGPT, and get expert-level personalised answers instantly.
+            Copy. Paste. Get expert-level personalised answers — <strong>instantly.</strong>
           </p>
         </motion.div>
 
@@ -73,6 +75,24 @@ const WhatYouGet = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="text-center mt-8 md:mt-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a href="#pricing">
+            <Button variant="hero" size="lg" className="rounded-full h-12 px-8 text-sm group">
+              Unlock the Full Library
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
+          <p className="text-xs text-muted-foreground mt-3">
+            ⚡ Early-access pricing — won't last forever
+          </p>
+        </motion.div>
       </div>
     </section>
   );

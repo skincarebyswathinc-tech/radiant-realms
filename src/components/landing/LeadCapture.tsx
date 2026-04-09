@@ -7,17 +7,17 @@ import { toast } from "sonner";
 import { Gift, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 
 const benefits = [
-  "10 ready-to-use prompts for skin, gut, nutrition & weight goals",
-  "Get a personalised wellness plan in under 60 seconds — free",
-  "Works with free ChatGPT — zero paid tools required",
-  "Bonus: Quick-start guide so you nail every prompt first try",
-  "Same framework used by 2,000+ women & wellness coaches",
+  "10 expert-crafted prompts for skin, gut, nutrition & weight — free",
+  "Get a personalised wellness plan in under 60 seconds",
+  "Works with free ChatGPT — zero paid tools needed",
+  "Bonus: Quick-start guide to nail every prompt on the first try",
+  "Same proven framework used by 2,000+ women & wellness coaches",
 ];
 
 const audienceItems = [
-  "Women tired of conflicting health advice online",
-  "Wellness & nutrition coaches who want faster client results",
-  "Anyone ready to stop guessing and start healing smarter",
+  "Women tired of conflicting health advice",
+  "Coaches who want effortless client results",
+  "Anyone ready to stop guessing and start transforming",
 ];
 
 const LeadCapture = () => {
@@ -64,14 +64,12 @@ const LeadCapture = () => {
 
   return (
     <section className="py-16 md:py-24 relative overflow-hidden" id="get-free">
-      {/* Contrast background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.06] via-sage/30 to-accent/10" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] md:w-[800px] h-[300px] md:h-[400px] bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center">
-            {/* Left — Value proposition */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -80,18 +78,17 @@ const LeadCapture = () => {
             >
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5 md:mb-6">
                 <Gift className="w-4 h-4" />
-                Free for a Limited Time
+                Free — Limited Time Only
               </div>
 
               <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-light leading-tight mb-3 md:mb-4">
                 Your First{" "}
-                <span className="italic text-primary">Wellness Breakthrough</span>
+                <span className="italic text-primary">Breakthrough</span>
                 {" "}Starts Here
               </h2>
 
               <p className="text-muted-foreground text-sm md:text-base mb-6 md:mb-8">
-                Download 10 expert-crafted AI prompts and get personalised skin,
-                gut & nutrition plans — in seconds, not hours.
+                Grab 10 proven AI prompts. Get personalised skin, gut & nutrition plans — <strong>in seconds, not hours.</strong> Completely free.
               </p>
 
               <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8">
@@ -125,7 +122,6 @@ const LeadCapture = () => {
               </div>
             </motion.div>
 
-            {/* Right — Form card */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +129,6 @@ const LeadCapture = () => {
               transition={{ duration: 0.6, delay: 0.12 }}
             >
               <div className="bg-card border border-border/60 rounded-2xl p-6 md:p-9 shadow-xl shadow-primary/5 relative">
-                {/* Decorative sparkle */}
                 <div className="absolute -top-3 -right-3 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-accent-foreground/60" />
                 </div>
@@ -145,7 +140,7 @@ const LeadCapture = () => {
                   Delivered straight to your inbox
                 </p>
                 <p className="text-xs text-primary/70 text-center mb-6 md:mb-7 font-medium">
-                  🔥 Over 2,000 downloads this month
+                  🔥 2,000+ downloads — spots filling fast
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-3.5 md:space-y-4">
@@ -159,7 +154,6 @@ const LeadCapture = () => {
                     required
                   />
 
-                  {/* WhatsApp opt-in */}
                   <div className="flex items-start gap-3 py-0.5">
                     <Checkbox
                       id="whatsapp-optin"
@@ -177,7 +171,6 @@ const LeadCapture = () => {
                     </label>
                   </div>
 
-                  {/* WhatsApp input — shown conditionally */}
                   {optInWhatsApp && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -206,7 +199,7 @@ const LeadCapture = () => {
                       "Sending…"
                     ) : (
                       <>
-                        Yes, Send My Free Prompts →
+                        Yes, Send My Free Prompts
                         <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </>
                     )}

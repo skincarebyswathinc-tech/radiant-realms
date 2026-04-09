@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Quote, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "I used the gut health prompts and ChatGPT gave me a complete bloating relief plan tailored to my diet. Saved me a ₹2,000 consultation!",
+    quote: "I used the gut health prompts and got a complete bloating relief plan tailored to MY diet. Saved me a ₹2,000 consultation. Effortless.",
     name: "Priya S.",
     role: "Working Professional, Mumbai",
   },
   {
-    quote: "As a health coach, these prompts save me hours. I use them to create personalised plans for my clients in minutes.",
+    quote: "As a health coach, these prompts save me hours. I create personalised plans for clients in minutes — not days. Game-changer.",
     name: "Dr. Meera K.",
     role: "Certified Health Coach, Bangalore",
   },
   {
-    quote: "The skin care prompts helped me understand my acne triggers better than any dermatologist visit. Absolutely worth it.",
+    quote: "The skin care prompts gave me instant clarity on my acne triggers. Better than any dermatologist visit. Worth every rupee.",
     name: "Ananya R.",
     role: "College Student, Delhi",
   },
@@ -31,13 +32,13 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-4">
-            Trusted by Thousands
+            Proven Results
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light mb-4">
-            Real <span className="italic">Results</span>
+            Real People. Real <span className="italic">Transformations.</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">
-            Hear from women who transformed their wellness routine.
+            Don't take our word for it. Hear from women who transformed their wellness — fast.
           </p>
         </motion.div>
 
@@ -67,6 +68,21 @@ const TestimonialsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="text-center mt-8 md:mt-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a href="#pricing">
+            <Button variant="hero" size="lg" className="rounded-full h-12 px-8 text-sm group">
+              Join 2,000+ Happy Users
+              <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
