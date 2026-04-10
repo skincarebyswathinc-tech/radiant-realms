@@ -42,21 +42,16 @@ const ThankYou = () => {
   const [seconds, setSeconds] = useState(59);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setSeconds((prev) => {
-        if (prev === 0) {
-          setMinutes((m) => (m === 0 ? 0 : m - 1));
-          return m => m === 0 ? 0 : 59;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Fix: proper countdown
-  useEffect(() => {
     const end = Date.now() + 15 * 60 * 1000;
+    const tick = () => {
+      const diff = Math.max(0, end - Date.now());
+      setMinutes(Math.floor(diff / 60000));
+      setSeconds(Math.floor((diff % 60000) / 1000));
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
     const tick = () => {
       const diff = Math.max(0, end - Date.now());
       setMinutes(Math.floor(diff / 60000));
