@@ -56,12 +56,9 @@ const LeadCapture = () => {
     setIsSubmitting(true);
 
     setTimeout(() => {
-      toast.success("You're in! Check your inbox for the free prompt pack 🎉");
-      setEmail("");
-      setWhatsapp("");
-      setOptInWhatsApp(false);
       setIsSubmitting(false);
-    }, 800);
+      navigate("/thank-you");
+    }, 600);
   };
 
   return (
