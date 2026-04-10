@@ -52,15 +52,6 @@ const ThankYou = () => {
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
   }, []);
-    const tick = () => {
-      const diff = Math.max(0, end - Date.now());
-      setMinutes(Math.floor(diff / 60000));
-      setSeconds(Math.floor((diff % 60000) / 1000));
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
 
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
