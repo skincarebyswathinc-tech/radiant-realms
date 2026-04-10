@@ -22,6 +22,7 @@ const audienceItems = [
 ];
 
 const LeadCapture = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [optInWhatsApp, setOptInWhatsApp] = useState(false);
