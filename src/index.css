@@ -38,10 +38,22 @@
 
     --gold: 42 60% 72%;
     --gold-dark: 38 50% 45%;
+    --gold-light: 42 65% 76%;
     --sage: 145 20% 85%;
     --sage-dark: 145 30% 42%;
+    --sage-light: 130 25% 80%;
     --cream: 40 33% 97%;
     --warm: 30 20% 92%;
+    --ivory: 40 33% 97%;
+    --beige: 38 28% 90%;
+    --sand: 36 28% 78%;
+    --brown: 28 20% 40%;
+    --brown-dark: 28 22% 24%;
+    --rose: 12 35% 74%;
+    --rose-light: 12 45% 88%;
+    --text-main: 28 25% 20%;
+    --text-muted: 28 12% 43%;
+    --text-light: 28 10% 60%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
