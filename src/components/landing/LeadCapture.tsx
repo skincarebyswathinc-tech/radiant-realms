@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { Gift, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const benefits = [
   "10 expert-crafted prompts for skin, gut, nutrition & weight — free",
@@ -28,7 +29,7 @@ const LeadCapture = () => {
   const [optInWhatsApp, setOptInWhatsApp] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const trimmedEmail = email.trim();
@@ -55,10 +56,20 @@ const LeadCapture = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      navigate("/thank-you");
-    }, 600);
+    const { error } = await supabase.from("leads").insert({
+      email: trimmedEmail,
+      whatsapp: optInWhatsApp && trimmedWhatsapp ? trimmedWhatsapp : null,
+      source: "landing",
+    });
+
+    setIsSubmitting(false);
+
+    if (error) {
+      toast.error("Something went wrong. Please try again.");
+      return;
+    }
+
+    navigate("/thank-you");
   };
 
   return (
