@@ -1,168 +1,144 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Shield, Zap, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const promptCards = [
-  { category: "Skin Care", prompt: "Create a proven morning routine for oily, acne-prone skin with Indian climate considerations…", color: "bg-primary/10 text-primary" },
-  { category: "Gut Health", prompt: "Design an effortless 7-day gut reset plan for someone with frequent bloating after meals…", color: "bg-accent/20 text-accent-foreground" },
-  { category: "Nutrition", prompt: "Build a science-backed 1,800 cal vegetarian meal plan optimised for PCOD management…", color: "bg-sage text-sage-dark" },
-  { category: "Fitness", prompt: "Create a fail-proof low-impact home workout for post-pregnancy recovery…", color: "bg-secondary text-secondary-foreground" },
+const stats = [
+  { number: "100+", label: "Premium Prompts" },
+  { number: "6", label: "Core Modules" },
+  { number: "7", label: "Bonus Resources" },
 ];
 
-const trustBadges = [
-  { icon: Users, label: "2,000+ Users" },
-  { icon: Star, label: "4.9★ Rated" },
-  { icon: Shield, label: "7-Day Guarantee" },
-  { icon: Zap, label: "Instant Access" },
+const tags = [
+  "Fat Loss Systems",
+  "Client Conversion",
+  "Content Engine",
+  "Client Delivery",
+  "Productivity",
+  "Business Growth",
 ];
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-sage/20" />
-      <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-accent/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
+    <section className="relative min-h-[88vh] md:min-h-screen overflow-hidden bg-brown-dark text-ivory">
+      {/* Soft radial glow background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 30%, hsl(var(--gold) / 0.10) 0%, transparent 70%), radial-gradient(ellipse 80% 60% at 20% 80%, hsl(var(--sage) / 0.08) 0%, transparent 60%)",
+        }}
+      />
+      {/* Double gold frame */}
+      <div className="absolute inset-4 md:inset-8 border border-gold/25 pointer-events-none" />
+      <div className="absolute inset-6 md:inset-10 border border-gold/10 pointer-events-none" />
 
-      <div className="container relative z-10 py-12 md:py-24 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="text-center lg:text-left order-1">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage text-sage-dark text-sm font-medium tracking-wide mb-5 md:mb-6">
-                <Zap className="w-3.5 h-3.5" />
-                🔥 Early Access — Limited-Time Pricing
-              </span>
-            </motion.div>
+      <div className="container relative z-10 flex flex-col items-center justify-center text-center py-20 md:py-28 lg:py-32 min-h-[88vh] md:min-h-screen">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 0.9, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-[10px] md:text-[11px] tracking-[5px] uppercase text-gold-light/90 font-medium mb-7"
+        >
+          Premium Digital Workbook · 2025 Edition
+        </motion.p>
 
-            <motion.h1
-              className="font-serif text-[2.25rem] md:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.08] tracking-tight mb-5 md:mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-            >
-              Instant Clarity for
-              <br />
-              <span className="italic font-normal text-primary">
-                Your Health Goals
-              </span>
-            </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="w-14 h-14 rounded-full border border-gold/50 flex items-center justify-center mb-9"
+        >
+          <svg viewBox="0 0 28 28" fill="none" className="w-7 h-7">
+            <circle cx="14" cy="14" r="11" stroke="hsl(var(--gold))" strokeWidth="1" />
+            <path d="M14 6 Q18 11 14 14 Q10 17 14 22" stroke="hsl(var(--gold))" strokeWidth="1" fill="none" />
+            <circle cx="14" cy="14" r="2" fill="hsl(var(--gold))" opacity="0.6" />
+          </svg>
+        </motion.div>
 
-            <motion.p
-              className="text-base md:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0 mb-8 md:mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              500+ proven AI prompts for skin care, gut health,
-              nutrition & fitness. <strong>Effortless answers in seconds.</strong> No guesswork. No overwhelm.
-            </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-serif font-light leading-[1.05] tracking-tight text-[44px] md:text-6xl lg:text-7xl text-ivory"
+        >
+          Nutrition
+          <em className="block italic font-light text-gold-light">Prompt Library</em>
+        </motion.h1>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-            >
-              <a href="#get-free">
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="h-13 md:h-14 px-8 md:px-10 rounded-full text-base group w-full sm:w-auto"
-                >
-                  Grab Your Free Prompt Pack
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
-              <a href="#pricing">
-                <Button
-                  variant="hero-outline"
-                  size="lg"
-                  className="h-13 md:h-14 px-8 md:px-10 rounded-full text-base w-full sm:w-auto"
-                >
-                  Unlock Full Library
-                </Button>
-              </a>
-            </motion.div>
+        <div className="w-28 md:w-32 h-px my-7 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
-            <motion.div
-              className="flex flex-wrap gap-x-5 md:gap-x-6 gap-y-2.5 mt-8 md:mt-10 justify-center lg:justify-start"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              {trustBadges.map((badge, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-1.5 md:gap-2 text-xs md:text-sm text-muted-foreground"
-                >
-                  <badge.icon className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary/70" />
-                  <span>{badge.label}</span>
-                </div>
-              ))}
-            </motion.div>
-          </div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-[11px] md:text-xs tracking-[3px] uppercase text-ivory/60 font-normal max-w-xl"
+        >
+          The Ultimate AI Prompt System for Nutrition Coaches &amp; Wellness Businesses
+        </motion.p>
 
-          <motion.div
-            className="relative order-2 hidden md:block"
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
+          className="mt-10 flex flex-col sm:flex-row items-center gap-3 sm:gap-4"
+        >
+          <Button
+            asChild
+            size="lg"
+            className="bg-gold hover:bg-gold-light text-brown-dark uppercase tracking-[3px] text-[11px] font-semibold rounded-none px-8 h-12 border border-gold"
           >
-            <div className="relative bg-card/80 backdrop-blur-sm border border-border/60 rounded-2xl p-5 shadow-2xl shadow-primary/5">
-              <div className="flex items-center gap-3 mb-5 pb-4 border-b border-border/40">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-destructive/40" />
-                  <div className="w-3 h-3 rounded-full bg-accent/50" />
-                  <div className="w-3 h-3 rounded-full bg-primary/40" />
-                </div>
-                <div className="flex-1 h-7 bg-muted/60 rounded-lg flex items-center px-3">
-                  <span className="text-xs text-muted-foreground">
-                    glowprompts.com/library
-                  </span>
-                </div>
-              </div>
+            <Link to="/auth?mode=signup">Begin Your Library</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="bg-transparent border-gold/50 text-ivory hover:bg-gold/10 hover:text-gold-light uppercase tracking-[3px] text-[11px] font-semibold rounded-none px-8 h-12"
+          >
+            <a href="#get-free">Free Prompt Pack</a>
+          </Button>
+        </motion.div>
 
-              <div className="space-y-3">
-                {promptCards.map((card, i) => (
-                  <motion.div
-                    key={i}
-                    className="flex items-start gap-3 p-3.5 rounded-xl bg-background/80 border border-border/30 hover:border-primary/20 transition-colors duration-300"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 + i * 0.12 }}
-                  >
-                    <span className={`shrink-0 mt-0.5 px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wide ${card.color}`}>
-                      {card.category}
-                    </span>
-                    <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
-                      {card.prompt}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="mt-5 pt-4 border-t border-border/40 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Star className="w-3 h-3 text-primary" />
-                  </div>
-                  <span className="text-xs text-muted-foreground">
-                    500+ prompts ready
-                  </span>
-                </div>
-                <span className="text-[11px] font-medium text-primary">
-                  Copy & Paste →
-                </span>
-              </div>
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="flex gap-10 md:gap-14 mt-14"
+        >
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <span className="block font-serif font-light text-3xl md:text-4xl text-gold leading-none">
+                {s.number}
+              </span>
+              <span className="block text-[8px] md:text-[9px] tracking-[2px] uppercase text-ivory/40 mt-2">
+                {s.label}
+              </span>
             </div>
+          ))}
+        </motion.div>
 
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/15 rounded-full blur-2xl" />
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-          </motion.div>
-        </div>
+        {/* Tags */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.85 }}
+          className="flex flex-wrap gap-2 md:gap-3 justify-center mt-12 max-w-2xl"
+        >
+          {tags.map((t) => (
+            <span
+              key={t}
+              className="text-[8px] md:text-[9px] tracking-[2px] uppercase text-gold/70 border border-gold/25 px-3 md:px-4 py-1.5 font-medium"
+            >
+              {t}
+            </span>
+          ))}
+        </motion.div>
+
+        <p className="absolute bottom-7 left-1/2 -translate-x-1/2 text-[9px] tracking-[3px] uppercase text-ivory/25">
+          Swathi Inc. · Premium Wellness Digital Products
+        </p>
       </div>
     </section>
   );
