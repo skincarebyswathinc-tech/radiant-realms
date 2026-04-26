@@ -16,7 +16,7 @@ import Footer from "@/components/landing/Footer";
 const Index = () => {
   return (
     <main className="overflow-x-hidden">
-      <AppHeader variant="dark" />
+      <AppHeader variant="light" />
       <HeroSection />
       <WelcomeSection />
       <PainPoints />
