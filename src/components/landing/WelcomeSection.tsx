@@ -36,10 +36,10 @@ const WelcomeSection = () => {
 
       <div className="container max-w-5xl">
         <div className="flex items-start justify-between pb-8 mb-10 border-b border-beige">
-          <span className="text-[9px] md:text-[10px] tracking-[4px] uppercase text-text-light/80 font-medium">
+          <span className="text-[9px] md:text-[10px] tracking-[4px] uppercase text-muted-foreground/80 font-medium">
             Nutrition Prompt Library · Premium Edition
           </span>
-          <span className="font-serif italic text-sm text-text-light hidden md:block">Welcome</span>
+          <span className="font-serif italic text-sm text-muted-foreground hidden md:block">Welcome</span>
         </div>
 
         <motion.h2
