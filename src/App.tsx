@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard.tsx";
 import Library from "./pages/Library.tsx";
 import CategoryDetail from "./pages/CategoryDetail.tsx";
 import Admin from "./pages/Admin.tsx";
+import AllEndpoints from "./pages/AllEndpoints.tsx";
 import { AuthProvider } from "./hooks/useAuth";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/library/:slug" element={<ProtectedRoute><CategoryDetail /></ProtectedRoute>} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/admin" element={<ProtectedRoute requireAdmin><Admin /></ProtectedRoute>} />
+            <Route path="/all-endpoints" element={<AllEndpoints />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
